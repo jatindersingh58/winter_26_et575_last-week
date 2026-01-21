@@ -88,3 +88,52 @@ int even2D( int a[][5], int rowsize){
 void printresults(int count){
     cout<<" The number of positive even numbers in the 2D array is: "<<count<<endl;
 }
+
+
+// example 3: working with a 2D and 1D array
+// create a function that calculates and returns the sum of all numbers in each row in 2D array (2 by 5)
+// the sum will be saved in a new 1D array
+
+void calculatetables(int t[][5], int arraysum[]){
+    for( int row = 0; row<2; row++){
+        int sumrow = 0;
+        for (int col = 0; col<5; col++){
+            sumrow+= t[row][col];
+        }
+        arraysum[row] = sumrow;
+        }
+}
+
+
+// function to print result: the sum of all numbers in each row
+void printtable(int t[]){
+    for(int row = 0; row<2; row++){
+        cout<<"row"<<row+1<< " = "<<t[row]<<endl;
+    }
+    cout<<endl;
+
+}
+
+// Exercise A
+//Write a function that finds and returns the minimum value in a one-dimensional array a.
+
+// function to return the minimum number in a 1D array
+int min_number( int arr[], int arraysize){
+    int min = arr[0]; // initialize the search for the minimum number pretending that the first number in the array is the minimum number
+    for(int i = 0; i<arraysize; i++){
+        if (arr[i] < min){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+//function to print result
+void print_min(int smallest){
+    cout<< " The minimum number is "<<smallest<<endl;   
+}
+
+
+
+// Exercise B
+//Write a function that finds and returns the maximum value in a one-dimensional array a.

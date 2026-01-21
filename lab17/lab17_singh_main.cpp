@@ -60,5 +60,35 @@ int counteven = even2D(numbers, rowsize);
 cout<<counteven;// testing
 
 printresults(counteven);
+
+
+
+cout<<"\n ------Example 3 : working with a 2D and 1D array------"<<endl;
+
+// declare 1 D array
+int sumallrows[2] = {0};
+// declare 2D array
+int arrnumber[][5] = {
+    {1, 2, 3, 4, 5},
+    {6, 7, 8, 9, 10}
+};
+
+// call func
+calculatetables(arrnumber, sumallrows);
+printtable(sumallrows);
+
+
+
+
+cout<<"\n ------exercise a------"<<endl;
+
+int numbers_size = 5;
+int numbers_one[numbers_size] = {12, 5, 8, 19, 3}; // inititalize values
+
+int smallest_num = min_number(numbers_one, numbers_size);
+
+// testing : cout<<smallest_num<<endl;
+
+print_min(smallest_num);
     return 0;
 }

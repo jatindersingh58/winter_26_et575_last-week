@@ -74,9 +74,12 @@ print_max(greatest_num);
 
 cout<<"\n ------exercise b ------"<<endl;
 
-
+// declare array
 const int ARRAY_SIZE = 10;
 int even_numbers[ARRAY_SIZE];
+
+
+// call functions
 fill_array(even_numbers, ARRAY_SIZE);
 int count = even_num(even_numbers, ARRAY_SIZE);
 print_even_count(count);
