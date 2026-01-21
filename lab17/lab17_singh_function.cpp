@@ -136,4 +136,28 @@ void print_min(int smallest){
 
 
 // Exercise B
-//Write a function that finds and returns the maximum value in a one-dimensional array a.
+
+
+void populate_Array2D(int k[][5]{
+    for(int row = 0; row<5; row++){
+        for (int col = 0; col<5; col++){
+            srand(time(0));
+            k [row][col] = rand()%255 +1;
+        }
+    }
+}
+
+int range2D(int arr[][5], int min, int max){
+    int count =0;
+     for(int row = 0; row<5; row++){
+        for (int col = 0; col<5; col++){
+            if (array[row][col] >= min && arr[row][col] <= max){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+
+

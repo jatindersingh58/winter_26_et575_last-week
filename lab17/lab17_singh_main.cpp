@@ -83,12 +83,37 @@ printtable(sumallrows);
 cout<<"\n ------exercise a------"<<endl;
 
 int numbers_size = 5;
-int numbers_one[numbers_size] = {12, 5, 8, 19, 3}; // inititalize values
+int numbers_one[numbers_size];// inititalize values
 
 int smallest_num = min_number(numbers_one, numbers_size);
 
 // testing : cout<<smallest_num<<endl;
 
 print_min(smallest_num);
+
+
+
+cout<<"\n ------exercise b ------"<<endl;
+
+
+// declare array
+const int ARRAY_SIZE = 5;
+int arrayNumber2D[ARRAY_SIZE][ARRAY_SIZE];
+int min = 1;
+int max = 255;
+
+
+// call to fill array with randomn numbers
+populate_Array2D(arrayNumber2D, ARRAY_SIZE, ARRAY_SIZE);
+
+
+// Call function to count the numbers in the array that are between min and max
+int totalNumber = range2D(arrayNumber2D, min, max);
+
+// print_result
+cout << "\nArray has " << totalNumber << " number(s) between " << min << " and " << max << endl
+
+
+
     return 0;
 }
