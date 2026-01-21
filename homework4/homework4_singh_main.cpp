@@ -15,10 +15,25 @@ using namespace std;
 
 int main (){
 
+// declare the array
+
 int array_size = 5;
 int array[array_size];
+
+// call function to populate the array
 winningdigits (array, array_size);
-userticket();
+int winningdigits[array_size];
+
+// call user ticket function to get user values
+userticket (array, array_size);
+int userticket [array_size];
+
+
+// call checkWinner for how many numbers match
+int matches = checkWinner(winningdigits, userticket, array_size);  // how come we dont put int before matches
+
+// call function to print
+printResult(winningdigits, userticket, matches, array_size);
 
 
 
