@@ -102,6 +102,8 @@ int arrayNumber2D[ARRAY_SIZE][ARRAY_SIZE];
 int min = 150;
 int max = 200;
 
+// seed random number generator to use current time and different seed
+srand(time(0));
 
 // call to fill array with randomn numbers
 populate_Array2D(arrayNumber2D);

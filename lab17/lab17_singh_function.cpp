@@ -141,7 +141,6 @@ const int ARRAY_SIZE = 5;
 void populate_Array2D(int k[ARRAY_SIZE][5]){
     for(int row = 0; row<5; row++){
         for (int col = 0; col<5; col++){
-            srand(time(0));
             k [row][col] = rand()%255 +1;
         }
     }

@@ -79,7 +79,7 @@ const int ARRAY_SIZE = 10;
 int even_numbers[ARRAY_SIZE];
 
 
-// seed random number generator to not use the same seed
+// seed random number generator to use current time and different seed
 srand(time(0));
 
 
