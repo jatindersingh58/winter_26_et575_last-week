@@ -14,27 +14,33 @@ homework 4
 
 using namespace std;
 
-int main (){
+int main(){
 
 // declare the array
 const int ARRAY_SIZE = 5;
 int array[ARRAY_SIZE];
 
+// seed random number generator to use current time and different seed
+srand(time(0));
+
 // call function to populate the array
-winningdigits (array, ARRAY_SIZE);
-int winningdigits[ARRAY_SIZE];
-// call user ticket function to get user values
-userticket (array, ARRAY_SIZE);
-int userticket [ARRAY_SIZE];
-// call checkWinner for how many numbers match
-int matches = checkWinner(winningdigits, userticket, ARRAY_SIZE);  // how come we dont put int before matches
-
-// call function to print
-printResult(winningdigits, userticket, matches, ARRAY_SIZE);
+winningdigits(array, ARRAY_SIZE);
 
 
 
 
+print_testing(array, ARRAY_SIZE);
 
+// new array for user ticket
+
+int user_array[ARRAY_SIZE];
+
+// call function user ticket to collect number from user
+
+userticket(user_array, ARRAY_SIZE);
+
+// print user ticket
+
+print_testing(user_array, ARRAY_SIZE);
 return 0;
 }
