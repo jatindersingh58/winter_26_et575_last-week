@@ -79,6 +79,10 @@ const int ARRAY_SIZE = 10;
 int even_numbers[ARRAY_SIZE];
 
 
+// seed random number generator to not use the same seed
+srand(time(0));
+
+
 // call functions
 fill_array(even_numbers, ARRAY_SIZE);
 int count = even_num(even_numbers, ARRAY_SIZE);

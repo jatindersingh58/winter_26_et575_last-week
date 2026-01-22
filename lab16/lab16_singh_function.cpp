@@ -175,7 +175,6 @@ void print_max(int greatest){
 // fill an array size with randomn integeers b/t 1 and 9 inclusive
 void fill_array(int *arr, int ARRAY_SIZE){
     for(int i = 0; i<ARRAY_SIZE; i++){
-        srand(time(0));
         arr[i] = (rand()%9+1); 
      }
 }
