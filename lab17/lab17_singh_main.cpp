@@ -99,8 +99,8 @@ cout<<"\n ------exercise b ------"<<endl;
 // declare array
 const int ARRAY_SIZE = 5;
 int arrayNumber2D[ARRAY_SIZE][ARRAY_SIZE];
-int min = 1;
-int max = 255;
+int min = 200;
+int max = 150;
 
 
 // call to fill array with randomn numbers
@@ -111,7 +111,7 @@ populate_Array2D(arrayNumber2D, ARRAY_SIZE, ARRAY_SIZE);
 int totalNumber = range2D(arrayNumber2D, min, max);
 
 // print_result
-cout << "\nArray has " << totalNumber << " number(s) between " << min << " and " << max << endl
+cout << "\nArray has " << totalNumber << " number(s) between " << min << " and " << max << endl;
 
 
 
