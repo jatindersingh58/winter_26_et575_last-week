@@ -104,18 +104,15 @@ int max = 200;
 
 
 // call to fill array with randomn numbers
-populate_Array2D(arrayNumber2D, ARRAY_SIZE, ARRAY_SIZE);
+populate_Array2D(arrayNumber2D);
 
 
 // Call function to count the numbers in the array that are between min and max
 int totalNumber = range2D(arrayNumber2D, min, max);
 
-// caal
 
 // print_result
-cout << "\nArray has " << totalNumber << " number(s) between " << min << " and " << max << endl;
 
-
-
+print_result(totalNumber, min, max);
     return 0;
 }

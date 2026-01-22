@@ -12,7 +12,7 @@ homework 4
 using namespace std;
 
 // declare constant for array size
-const int ARRAY_SIZE = 5;
+
 
 void winningdigits(int winning_array[], int ARRAY_SIZE){
    for (int i = 0; i<= ARRAY_SIZE; i ++){

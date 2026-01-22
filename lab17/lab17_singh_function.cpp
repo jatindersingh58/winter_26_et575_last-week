@@ -118,7 +118,7 @@ void printtable(int t[]){
 //Write a function that finds and returns the minimum value in a one-dimensional array a.
 
 // function to return the minimum number in a 1D array
-int min_number( int arr[], int arraysize){
+int min_number(int arr[], int arraysize){
     int min = arr[0]; // initialize the search for the minimum number pretending that the first number in the array is the minimum number
     for(int i = 0; i<arraysize; i++){
         if (arr[i] < min){
@@ -147,6 +147,7 @@ void populate_Array2D(int k[ARRAY_SIZE][5]){
     }
 }
 
+// range fnction to count how many numbers are between min and max
 int range2D(int k[][5], int min, int max){
     int count =0;
      for(int row = 0; row<5; row++){
@@ -157,4 +158,9 @@ int range2D(int k[][5], int min, int max){
         }
     }
     return count;
+}
+
+// print_result function
+void print_result(int count, int min, int max){
+    cout<<" The number of values between "<< min << " and "<< max << " is: "<< count <<endl;
 }
