@@ -28,7 +28,12 @@ cout<<"\n ------Example 2 : console failiure to validate a data type------"<<end
    float n = validatenumber();
    cout<<" The valid number entered is: "<<n<<endl;  
 
+cout<<"\n ------exercise 1------"<<endl;
 
+int n1 = 20;
+int n2 = 30;
+int outcome = compute (n1,n2);
+cout<<" The result of the computation is: "<<outcome<<endl;
 
 
 

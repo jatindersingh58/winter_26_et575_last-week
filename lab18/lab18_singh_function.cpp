@@ -46,3 +46,45 @@ float validatenumber(){
   
     return n;
 }
+
+// exercise a
+//Lab exercise 1 description:
+
+//Write a function that perform +, -, *, /, and % operation. 
+
+//the function takes two numbers which are passed to the functions.
+//Within the functions, it will collect an operation symbol +, -, *, /, and % and valid the cin flag.
+//If the flag fails or an incorrect symbol was entered, the program should ask for another symbol.
+//If the flag passes, then perform the operation and return the result.
+
+int compute (int num1, int num2){
+    char symbol;
+    bool isnotvalid = false;
+    int result;
+    do{
+        cout<<" Enter a symbol (+, -, *, /, or  %): ";
+        cin>>symbol;
+        isnotvalid = cin.fail() || (symbol != '+' && symbol != '-' && symbol != '*' && symbol != '/' && symbol != '%');
+        cin.clear();
+        cin.ignore(10000, '\n');
+    } while (isnotvalid);
+
+    switch(symbol){
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        case '%':
+            result = num1 % num2;
+            break;
+    }
+    return result;
+}

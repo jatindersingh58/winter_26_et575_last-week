@@ -137,8 +137,8 @@ void print_min(int smallest){
 
 // Exercise B
 
-
-void populate_Array2D(int k[][5], int row, int col){
+const int ARRAY_SIZE = 5;
+void populate_Array2D(int k[ARRAY_SIZE][5]){
     for(int row = 0; row<5; row++){
         for (int col = 0; col<5; col++){
             srand(time(0));
@@ -158,6 +158,3 @@ int range2D(int k[][5], int min, int max){
     }
     return count;
 }
-
-
-
