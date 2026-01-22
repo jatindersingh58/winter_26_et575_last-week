@@ -62,9 +62,9 @@ int compute (int num1, int num2){
     bool isnotvalid = false;
     int result;
     do{
-        cout<<" Enter a symbol (+, -, *, /, or  %): ";
+        cout<<" Enter a symbol (+, -, *, /, or  %): "; 
         cin>>symbol;
-        isnotvalid = cin.fail(); || 
+        isnotvalid = cin.fail() || (symbol != '+' && symbol != '-' && symbol != '*' && symbol != '/' && symbol != '%');
         cin.clear();
         cin.ignore(10000, '\n');
     } while (isnotvalid);
