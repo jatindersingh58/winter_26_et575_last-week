@@ -37,11 +37,40 @@ void userticket(int *user_array, int ARRAY_SIZE){
     }
 
 }
+// check winning ticket with user ticket to see how many numbers match
+int checkWinner(int *winning_array, int *user_array, int ARRAY_SIZE){
+   int countmatches = 0;
+    for(int i = 0; i<ARRAY_SIZE; i++){
+        if ((winning_array[i] == user_array[0]) || (winning_array[i] == user_array[1]) || (winning_array[i] == user_array[2]) || (winning_array[i] == user_array[3]) || (winning_array[i] == user_array[4]) || (user_array[i] == winning_array[0]) || (user_array[i] == winning_array[1]) || (user_array[i] == winning_array[2]) || (user_array[i] == winning_array[3]) || (user_array[i] == winning_array[4])){
+            countmatches ++;
+        }
+    }
+    return countmatches;
+}
+
 // testing
-void print_testing(int *winning_array, int ARRAY_SIZE){
+//void print_testing(int *winning_array, int ARRAY_SIZE){
+//    for(int i = 0; i<ARRAY_SIZE; i++){
+//        cout<<winning_array[i]<<"\t";
+//    }
+//    cout<<endl;
+//}
+
+
+// print results
+void printResult(int *winning_array, int *user_array, int matches, int ARRAY_SIZE){
     for(int i = 0; i<ARRAY_SIZE; i++){
         cout<<winning_array[i]<<"\t";
+        cout<<"The winning ticket numbers are: "<<*winning_array<<endl;
     }
     cout<<endl;
+   for(int i = 0; i<ARRAY_SIZE; i++){
+      cout<user_array[i]<<"\t";
+         cout<<"Your ticket numbers are: "<<*user_array<<endl;
+      }
+   cout<<endl;
+
+   cout<<"You have "<<matches<<" matching numbers."<<endl;
 }
+
 
